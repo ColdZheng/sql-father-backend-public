@@ -41,7 +41,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "名称过长");
         }
         if (StringUtils.isNotBlank(content)) {
-            if (content.length() > 20000) {
+            if (content.length() > 200000) {
                 throw new BusinessException(ErrorCode.PARAMS_ERROR, "内容过长");
             }
             // 对 content 进行转换

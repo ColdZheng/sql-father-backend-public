@@ -38,7 +38,7 @@ public class TableInfoServiceImpl extends ServiceImpl<TableInfoMapper, TableInfo
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "名称过长");
         }
         if (StringUtils.isNotBlank(content)) {
-            if (content.length() > 20000) {
+            if (content.length() > 200000) {
                 throw new BusinessException(ErrorCode.PARAMS_ERROR, "内容过长");
             }
             // 校验字段内容

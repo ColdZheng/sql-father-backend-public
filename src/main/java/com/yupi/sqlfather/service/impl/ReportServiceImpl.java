@@ -25,7 +25,7 @@ public class ReportServiceImpl extends ServiceImpl<ReportMapper, Report> impleme
         String content = report.getContent();
         Long reportedId = report.getReportedId();
         Integer status = report.getStatus();
-        if (StringUtils.isNotBlank(content) && content.length() > 1024) {
+        if (StringUtils.isNotBlank(content) && content.length() > 10024) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "内容过长");
         }
         // 创建时必须指定
